@@ -24,56 +24,30 @@
 		<spring.cloud.alibaba.version>2.2.7.RELEASE</spring.cloud.alibaba.version>
 
 
-		<!-- 1.0.26 -> 1.2.5 -->
 		<druid.version>1.2.5</druid.version>
-
-		<!-- 8.0.13 -> 8.0.23 -->
 		<mysql.version>8.0.23</mysql.version>
-
 		<commons-lang.version>2.6</commons-lang.version>
-		<!-- 3.9 -> 3.12.0 -->
 		<commons-lang3.version>3.12.0</commons-lang3.version>
-		<!-- 2.6 -> 2.8.0 -->
 		<commons-io.version>2.8.0</commons-io.version>
-		<!-- add 1.15 -->
 		<commons-codec.version>1.15</commons-codec.version>
-
-		<!-- 1.9.0.RELEASE -> 1.9.1.RELEASE -->
 		<swagger.version>1.9.1.RELEASE</swagger.version>
-
-		<!-- 1.2.61 -> 1.2.75 -->
 		<fastjson.version>1.2.75</fastjson.version>
-
 		<!-- commons-collections 替换为 commons-collections4 -->
 		<commons-collections4.version>4.4</commons-collections4.version>
-		<!--		老的毕竟还有在用的，先放着吧-->
+		<!-- 老的毕竟还有在用的，先放着吧-->
 		<commons-collections.version>3.2.2</commons-collections.version>
-
-		<!-- 1.2.4 -> 1.3.0 -->
 		<pagehelper.version>1.3.0</pagehelper.version>
-
 		<mail.version>1.4.7</mail.version>
-
-		<!-- 3.2.0 -> 3.4.1 -->
 		<mybatis-plus-boot-starter.version>3.4.1</mybatis-plus-boot-starter.version>
-
-		<!-- 1.18.8 -> 1.18.20 -->
 		<lombok.version>1.18.20</lombok.version>
-
-		<!-- 4.2.2 -> 4.9.1 -->
-		<!-- 防止冲突，写死对应 kotlin-stdlib 版本 -->
 		<okhttp.version>4.9.1</okhttp.version>
+		<!-- 防止冲突，写死对应 kotlin-stdlib 版本 -->
 		<kotlin-stdlib.version>1.4.10</kotlin-stdlib.version>
-
 		<feign-form-spring.version>3.8.0</feign-form-spring.version>
 		<feign-form.version>3.8.0</feign-form.version>
-
-		<!-- 2.1.6 -> 2.2.8 -->
 		<easyexcel.version>2.2.8</easyexcel.version>
-
 		<logstash-logback-encoder.version>5.3</logstash-logback-encoder.version>
 		<spring-cloud-starter-kubernetes-all.version>1.1.6.RELEASE</spring-cloud-starter-kubernetes-all.version>
-
 		<ali-transmittable-thread-local.version>2.12.1</ali-transmittable-thread-local.version>
 		<hutool.version>5.7.7</hutool.version>
 		<commons-httpclient.version>3.1</commons-httpclient.version>
