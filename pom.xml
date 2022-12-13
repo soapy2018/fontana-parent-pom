@@ -67,10 +67,15 @@
 		<docker.java.security.egd>-Djava.security.egd=file:/dev/./urandom</docker.java.security.egd>
 		<docker.java.opts>-Xms128m -Xmx128m</docker.java.opts>
 
+		<hibernate-validator.version>6.2.0.Final</hibernate-validator.version>
 		<hibernate-core.version>5.4.22.Final</hibernate-core.version>
 		<mapstruct.version>1.4.2.Final</mapstruct.version>
 		<bean.query.version>1.1.5</bean.query.version>
 		<knife4j.boot.version>2.0.5</knife4j.boot.version>
+
+		<flowable.version>6.6.0</flowable.version>
+		<fastdfs-client.version>1.27.2</fastdfs-client.version>
+		<aws-java-sdk-s3.version>1.11.792</aws-java-sdk-s3.version>
 
 		<maven-source-plugin.version>3.2.1</maven-source-plugin.version>
 		<jacoco.version>0.8.7</jacoco.version>
@@ -304,20 +309,23 @@
 						<!-- on the configuration of annotationProcessors.                                           -->
 						<!-- 因为MapStruct需要在编译器生成转换代码，所以需要在maven-compiler-plugin插件中配置上对mapstruct-processor的引用-->
 						<annotationProcessorPaths>
+							<!-- MapStruct 注解处理器 -->
+							<path>
+								<groupId>org.mapstruct</groupId>
+								<artifactId>mapstruct-processor</artifactId>
+								<version>${mapstruct.version}</version>
+							</path>
+							<!-- Lombok 注解处理器 -->
 							<path>
 								<groupId>org.projectlombok</groupId>
 								<artifactId>lombok</artifactId>
 								<version>${lombok.version}</version>
 							</path>
+							<!-- MapStruct 和 Lombok 注解绑定处理器 -->
 							<path>
 								<groupId>org.projectlombok</groupId>
 								<artifactId>lombok-mapstruct-binding</artifactId>
 								<version>0.2.0</version>
-							</path>
-							<path>
-								<groupId>org.mapstruct</groupId>
-								<artifactId>mapstruct-processor</artifactId>
-								<version>${mapstruct.version}</version>
 							</path>
 						</annotationProcessorPaths>
 					</configuration>
