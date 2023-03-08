@@ -27,10 +27,10 @@ RUN set -x \
  && rm -rf /tmp/* 
  
 #set env
-ENV PATH=$PATH:/home/admin/.local/bin/jre-8u321/bin \
-    JAVA_HOME=/home/admin/.local/bin/jre-8u321 \
-	JRE_HOME=/home/admin/.local/bin/jre-8u321/jre  \
-	CLASSPATH=.:/home/admin/.local/bin/lib:/home/admin/.local/bin/jre-8u321/jre/lib \
+ENV PATH=$PATH:/home/admin/.local/bin/jre1.8.0_321/bin \
+    JAVA_HOME=/home/admin/.local/bin/jre1.8.0_321 \
+	JRE_HOME=/home/admin/.local/bin/jre1.8.0_321/jre  \
+	CLASSPATH=.:/home/admin/.local/bin/lib:/home/admin/.local/bin/jre1.8.0_321/jre/lib \
 	LANG=zh_CN.UTF-8 
 	
 #export sshd port
