@@ -297,6 +297,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.1</version>
 					<configuration>
 						<source>${java.version}</source>
 						<target>${java.version}</target>
@@ -330,37 +331,6 @@
 						</annotationProcessorPaths>
 					</configuration>
 				</plugin>
-				<!--   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    -->
-
-				<!--   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    -->
-				<!--                添加了spring-boot-maven-plugin插件后，当运行mvn package时，-->
-				<!--                项目会被打包成一个可以直接运行的jar包，使用"java -jar"可以直接运行。-->
-				<!--                如果是一个不需要执行的jar包，类似common这种，在本身的项目配置里-->
-				<!--                下面两个只能二选一                -->
-				<!-- 可执行jar 打包插件 -->
-				<!-- 版本默认跟着 spring-boot-parent走 -->
-				<!--基础插件-->
-				<plugin>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-maven-plugin</artifactId>
-					<executions>
-						<execution>
-							<goals>
-								<goal>repackage</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-
-				<!-- 打包不需要执行的jar-->
-				<!--                <plugin>-->
-				<!--                    <groupId>org.springframework.boot</groupId>-->
-				<!--                    <artifactId>spring-boot-maven-plugin</artifactId>-->
-				<!--                    <configuration>-->
-				<!--                        &lt;!&ndash; 跳过 repackage &ndash;&gt;-->
-				<!--                        <skip>true</skip>-->
-				<!--                    </configuration>-->
-				<!--                </plugin>-->
 				<!--   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    -->
 
 				<!--   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    -->
@@ -399,6 +369,38 @@
 						</execution>
 					</executions>
 				</plugin>
+				<!--   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    -->
+
+				<!--   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    -->
+				<!--                添加了spring-boot-maven-plugin插件后，当运行mvn package时，-->
+				<!--                项目会被打包成一个可以直接运行的jar包，使用"java -jar"可以直接运行。-->
+				<!--                如果是一个不需要执行的jar包，类似common这种，在本身的项目配置里-->
+				<!--                下面两个只能二选一                -->
+				<!-- 可执行jar 打包插件 -->
+				<!-- 版本默认跟着 spring-boot-parent走 -->
+				<!-- 非基础插件-->
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+<!--					<version>2.3.12.RELEASE</version>-->
+					<executions>
+						<execution>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<!-- 打包不需要执行的jar-->
+				<!--                <plugin>-->
+				<!--                    <groupId>org.springframework.boot</groupId>-->
+				<!--                    <artifactId>spring-boot-maven-plugin</artifactId>-->
+				<!--                    <configuration>-->
+				<!--                        &lt;!&ndash; 跳过 repackage &ndash;&gt;-->
+				<!--                        <skip>true</skip>-->
+				<!--                    </configuration>-->
+				<!--                </plugin>-->
 				<!--   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    -->
 
 				<!--   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    -->
