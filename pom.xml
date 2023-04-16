@@ -3,7 +3,7 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.fontana</groupId>
-	<version>1.1.2-SNAPSHOT</version>
+	<version>1.2.2-SNAPSHOT</version>
 	<artifactId>fontana-parent-pom</artifactId>
 	<packaging>pom</packaging>
 
@@ -80,7 +80,7 @@
 		<maven-source-plugin.version>3.2.1</maven-source-plugin.version>
 		<jacoco.version>0.8.7</jacoco.version>
 
-		<!-- 宁波sonar环境 -->
+		<!-- sonar环境 -->
 		<sonar.host.url>http://192.168.8.92:9000</sonar.host.url>
 		<!--        sonar用户名和密码，默认是admin/admin，如果没改过，可以不配-->
 		<sonar.login>admin</sonar.login>
@@ -620,12 +620,12 @@
 
 	<distributionManagement>
 		<repository>
-			<id>bluetron-releases</id>
-			<url>http://nexus.nb.bluetron.cn/repository/bluetron-releases/</url>
+			<id>grab-releases</id>
+			<url>http://192.168.2.31:8081/repository/grab-releases/</url>
 		</repository>
 		<snapshotRepository>
-			<id>bluetron-snapshots</id>
-			<url>http://nexus.nb.bluetron.cn/repository/bluetron-snapshots/</url>
+			<id>grab-snapshots</id>
+			<url>http://192.168.2.31:8081/repository/grab-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 

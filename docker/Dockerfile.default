@@ -1,4 +1,0 @@
-FROM daocloud.io/library/java:8u40-jdk
-COPY grab.jar /usr/local/
-WORKDIR /usr/local
-CMD java -jar grab.jar
