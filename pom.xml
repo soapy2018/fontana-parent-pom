@@ -23,7 +23,6 @@
 		<spring.cloud.version>Hoxton.SR12</spring.cloud.version>
 		<spring.cloud.alibaba.version>2.2.7.RELEASE</spring.cloud.alibaba.version>
 
-
 		<druid.version>1.2.5</druid.version>
 		<mysql.version>8.0.22</mysql.version>
 		<commons-lang.version>2.6</commons-lang.version>
@@ -85,7 +84,6 @@
 		<!--        sonar用户名和密码，默认是admin/admin，如果没改过，可以不配-->
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin</sonar.password>
-
 
 	</properties>
 
